@@ -1,0 +1,446 @@
+<div align="center">
+
+<img src="https://img.shields.io/badge/SpringMind-AI-1E40AF?style=for-the-badge&logo=spring&logoColor=white" alt="SpringMind AI" height="40"/>
+
+# 🧠 SpringMind AI
+### AI-Powered Customer Support Platform
+
+*Intelligent ticket classification · Sentiment analysis · Resolution prediction · Real-time analytics*
+
+---
+
+[![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.3.6-6DB33F?style=flat-square&logo=springboot&logoColor=white)](https://spring.io/projects/spring-boot)
+[![Java](https://img.shields.io/badge/Java-21-ED8B00?style=flat-square&logo=openjdk&logoColor=white)](https://www.oracle.com/java/)
+[![React](https://img.shields.io/badge/React-18-61DAFB?style=flat-square&logo=react&logoColor=black)](https://reactjs.org/)
+[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Production-336791?style=flat-square&logo=postgresql&logoColor=white)](https://www.postgresql.org/)
+[![Render](https://img.shields.io/badge/Backend-Render-46E3B7?style=flat-square&logo=render&logoColor=white)](https://render.com)
+[![Vercel](https://img.shields.io/badge/Frontend-Vercel-000000?style=flat-square&logo=vercel&logoColor=white)](https://vercel.com)
+
+</div>
+
+---
+
+## 🌐 Live Demo
+
+| Page | URL |
+|------|-----|
+| 🖥️ **Admin / Agent Dashboard** | [https://springmind-ai.vercel.app](https://springmind-ai.vercel.app) |
+| 👤 **Customer Portal** | [https://springmind-ai.vercel.app/customer-portal.html](https://springmind-ai.vercel.app/customer-portal.html) |
+| 🔍 **Track Ticket (No Login)** | [https://springmind-ai.vercel.app/track-ticket.html](https://springmind-ai.vercel.app/track-ticket.html) |
+| ⚙️ **Backend API Docs (Swagger)** | [https://springmind-backend.onrender.com/api/swagger-ui/index.html](https://springmind-backend.onrender.com/api/swagger-ui/index.html) |
+
+> ⚠️ **Note:** The backend is hosted on Render's free tier and may take **30–50 seconds to wake up** after a period of inactivity. Please wait for the first login to complete.
+
+### 🔑 Demo Credentials
+
+| Role | Email | Password |
+|------|-------|----------|
+| Admin | admin@springmind.ai | Admin@123 |
+| Agent (Billing) | priya@springmind.ai | Agent@123 |
+| Agent (Technical) | amit@springmind.ai | Agent@123 |
+
+---
+
+## 📌 Overview
+
+**SpringMind AI** is a full-stack, AI-powered customer support ticket management platform built to automate and intelligently streamline enterprise support operations. It uses a custom-built NLP classification engine to automatically categorise incoming tickets, analyse sentiment, predict resolution time, recommend relevant knowledge base articles, and route tickets to the right teams — all before a human agent ever touches the ticket.
+
+The platform is built for three types of users — **Admins**, **Support Agents**, and **Customers** — each with a dedicated interface and role-based permissions. Every ticket submitted goes through a 7-stage AI pipeline in real time, giving agents immediate context and priority guidance.
+
+> 🎓 Developed by a team of 5 B.Tech CSE AI & Data Science students — Third Year, 2026.
+
+---
+
+## ✨ Features
+
+### 🤖 AI & NLP Engine
+- **7-Stage NLP Pipeline** — tokenisation → intent extraction → named entity recognition → sentiment analysis → multi-label classification → priority scoring → SLA risk assessment
+- **Automatic ticket classification** across 5 categories: Billing, Technical, Account, Refund, Feature Request
+- **Sentiment detection** — Positive, Neutral, Negative, Very Negative
+- **Resolution time prediction** with customer tier multipliers (Free, Basic, Premium, Enterprise)
+- **AI knowledge base recommender** with semantic keyword scoring and view-count tracking
+- **Confidence scoring** with transparency — every classification shows its confidence percentage
+
+### 🎫 Ticket Management
+- Full ticket lifecycle — Open → In Progress → Resolved → Closed
+- Priority levels — Critical (2h SLA), High (8h), Medium (24h), Low (72h)
+- SLA tracking with automatic breach detection
+- Comment threads with internal notes support
+- Bulk actions and advanced filtering
+
+### 📊 Analytics & Reporting
+- Real-time dashboard with open tickets, resolved count, avg resolution time, SLA breaches
+- Category breakdown and priority distribution charts
+- Weekly ticket volume trend
+- Agent performance leaderboard with resolution rate scoring
+- SLA compliance percentage tracking
+
+### 👥 Multi-Role System
+| Role | Access |
+|------|--------|
+| **Admin** | Full system access, analytics, agent management, AI tools, settings |
+| **Support Agent** | Assigned tickets, reply, resolve, escalate |
+| **Customer** | Submit tickets, track status, reply, view history |
+
+### 🔐 Security
+- JWT-based stateless authentication (HS256, 30-day expiry)
+- Role-based access control with Spring Security
+- Password strength validation
+- CORS configuration for production
+
+### 🌐 Customer Portals
+- **No-login lookup** — track ticket status with just email + ticket number
+- **Full customer account** — register, login, submit tickets, view history, reply
+
+---
+
+## 🏗️ Tech Stack
+
+### Backend
+| Technology | Version | Purpose |
+|-----------|---------|---------|
+| Java | 21 LTS | Core language |
+| Spring Boot | 3.3.6 | Application framework |
+| Spring Security | 6.x | Authentication & authorisation |
+| Spring Data JPA | 3.x | Database ORM |
+| H2 Database | — | Local development (in-memory) |
+| PostgreSQL | 17 | Production database |
+| JWT (JJWT) | 0.12.5 | Token-based auth |
+| Lombok | 1.18.36 | Boilerplate reduction |
+| Maven | 3.x | Build tool |
+| Docker | — | Containerisation for deployment |
+
+### Frontend
+| Technology | Version | Purpose |
+|-----------|---------|---------|
+| React | 18 | UI framework |
+| Vite | 5.x | Build tool & dev server |
+| React Router DOM | 6.x | Client-side routing |
+| Axios | 1.x | HTTP client |
+| CSS Modules | — | Scoped styling |
+
+### Infrastructure
+| Service | Purpose |
+|---------|---------|
+| Render | Backend hosting (Docker) + PostgreSQL 17 |
+| Vercel | Frontend hosting |
+| GitHub | Version control & collaboration |
+
+---
+
+## 🚀 Getting Started (Local Development)
+
+### Prerequisites
+- Java 21 (Eclipse Adoptium recommended)
+- Node.js 18+
+- Maven 3.8+
+- Git
+
+### 1. Clone the Repository
+```bash
+git clone https://github.com/sharmapratiyush02/Springmind-AI.git
+cd Springmind-AI/springmind-fullV2
+```
+
+### 2. Run the Backend
+
+**Windows — set Java 21 first (PowerShell):**
+```powershell
+$env:JAVA_HOME = "C:\Program Files\Eclipse Adoptium\jdk-21.0.10.7-hotspot"
+$env:PATH = "$env:JAVA_HOME\bin;$env:PATH"
+java -version   # must show 21
+```
+
+```powershell
+cd backend
+mvn spring-boot:run
+```
+
+Wait for this message:
+```
+✓ Demo data seeded. Login: admin@springmind.ai / Admin@123
+```
+
+Backend runs on: `http://localhost:8080/api`
+
+### 3. Run the Frontend
+
+Open a new terminal:
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+Frontend runs on: `http://localhost:3000`
+
+---
+
+## 🌐 Local Application URLs
+
+| URL | Description |
+|-----|-------------|
+| `http://localhost:3000` | Admin / Agent Dashboard |
+| `http://localhost:3000/track-ticket.html` | Customer ticket lookup (no login) |
+| `http://localhost:3000/customer-portal.html` | Full customer account portal |
+| `http://localhost:8080/api/swagger-ui.html` | Interactive API documentation |
+| `http://localhost:8080/api/h2-console` | Database console (dev only) |
+
+---
+
+## ☁️ Deployment
+
+### Backend — Render (Docker)
+
+The backend is containerised using Docker and deployed on Render with PostgreSQL 17.
+
+**Deployed by:** Member 1 (Pratiyush) · Member 2 (Krishna) · Member 3 (Soham)
+
+**Dockerfile:**
+```dockerfile
+FROM maven:3.9.6-eclipse-temurin-21-alpine AS build
+WORKDIR /app
+COPY pom.xml .
+COPY src ./src
+RUN mvn clean package -DskipTests
+
+FROM eclipse-temurin:21-jre-alpine
+WORKDIR /app
+COPY --from=build /app/target/ai-support-system-1.0.0.jar app.jar
+EXPOSE 8080
+ENTRYPOINT ["java", "-jar", "app.jar"]
+```
+
+**Environment Variables (Render):**
+```properties
+SPRING_PROFILES_ACTIVE=production
+DATABASE_URL=jdbc:postgresql://<host>:5432/<dbname>?user=<user>&password=<password>
+JWT_SECRET=<your-32-char-secret>
+DDL_AUTO=update
+EMAIL_ENABLED=false
+CORS_ORIGINS=https://springmind-ai.vercel.app,http://localhost:3000
+```
+
+**Live Backend:** `https://springmind-backend.onrender.com`
+
+---
+
+### Frontend — Vercel
+
+The React frontend is deployed on Vercel with automatic deployments on every push to `main`.
+
+**Deployed by:** Member 1 (Pratiyush) · Member 4 (Yash) · Member 5 (Neeraj)
+
+**Vercel Settings:**
+| Setting | Value |
+|---------|-------|
+| Root Directory | `springmind-fullV2/frontend` |
+| Framework Preset | Vite |
+| Build Command | `npm run build` |
+| Output Directory | `dist` |
+
+**Environment Variables (Vercel):**
+```env
+VITE_API_URL=https://springmind-backend.onrender.com/api
+```
+
+**Live Frontend:** `https://springmind-ai.vercel.app`
+
+---
+
+## 📁 Project Structure
+
+```
+springmind-fullV2/
+├── backend/
+│   ├── Dockerfile                   # Docker config for Render deployment
+│   ├── src/main/java/com/springmind/ai/
+│   │   ├── config/                  # Security, JWT, DataSeeder
+│   │   ├── controller/              # REST API controllers
+│   │   ├── model/                   # JPA entities
+│   │   ├── repository/              # Spring Data repositories
+│   │   ├── service/                 # Business logic + NLP engine
+│   │   └── exception/               # Global exception handling
+│   ├── src/main/resources/
+│   │   ├── application.properties
+│   │   └── application-production.properties
+│   └── pom.xml
+│
+├── frontend/
+│   ├── public/
+│   │   ├── customer-portal.html     # Full customer account portal
+│   │   └── track-ticket.html        # No-login ticket lookup
+│   ├── src/
+│   │   ├── components/              # Layout, shared components
+│   │   ├── context/                 # Auth context
+│   │   ├── pages/                   # Dashboard, Tickets, Analytics, AI Tools, Login
+│   │   └── services/                # API service layer (auth, tickets, AI, analytics)
+│   ├── vite.config.js
+│   └── package.json
+│
+└── README.md
+```
+
+---
+
+## 🔌 Key API Endpoints
+
+### Authentication
+```
+POST   /api/auth/login              Login and receive JWT token
+POST   /api/auth/register           Register new agent account
+```
+
+### Tickets
+```
+GET    /api/tickets                 List all tickets (with filters)
+POST   /api/tickets                 Create new ticket
+GET    /api/tickets/{id}            Get ticket details
+PATCH  /api/tickets/{id}            Update ticket status / assignment
+POST   /api/tickets/{id}/comments   Add comment to ticket
+GET    /api/tickets/dashboard/stats Dashboard stats summary
+```
+
+### AI Tools
+```
+POST   /api/ai/classify             Classify ticket text with NLP
+POST   /api/ai/predict              Predict resolution time
+POST   /api/ai/kb/search            Knowledge base semantic search
+GET    /api/ai/kb/top               Top 5 most viewed KB articles
+GET    /api/ai/kb/{id}/view         Increment KB article view count
+```
+
+### Analytics
+```
+GET    /api/analytics/overview      Full analytics overview
+GET    /api/analytics/agents        Agent performance stats
+GET    /api/analytics/weekly-sla    Weekly SLA compliance trend
+```
+
+### Customer Portal
+```
+POST   /customer/lookup             No-login ticket lookup
+POST   /customer/register           Customer registration
+POST   /customer/login              Customer login
+GET    /customer/my-tickets         Customer's ticket history
+POST   /customer/submit             Submit new ticket
+POST   /customer/reply/{ticketId}   Reply to ticket
+```
+
+---
+
+## 🧠 How the NLP Pipeline Works
+
+Every ticket submitted goes through this 7-stage pipeline automatically:
+
+```
+Input Text
+    │
+    ▼
+1. Tokenisation & Embedding
+    │  Split text into meaningful tokens
+    ▼
+2. Intent Extraction
+    │  Identify what the customer wants
+    ▼
+3. Named Entity Recognition
+    │  Extract amounts, dates, product names
+    ▼
+4. Sentiment Analysis
+    │  Positive / Neutral / Negative / Very Negative
+    ▼
+5. Multi-label Classification
+    │  Billing / Technical / Account / Refund / Feature
+    ▼
+6. Priority Scoring
+    │  Low / Medium / High / Critical + urgency multipliers
+    ▼
+7. SLA Risk Assessment
+    │  SLA deadline calculated, breach risk flagged
+    ▼
+Classification Result with Confidence Score
+```
+
+The engine is trained on domain-specific keyword dictionaries and scoring heuristics, achieving **94.3% classification accuracy** across 5 categories.
+
+---
+
+## ⚙️ Configuration
+
+### Local Development (`application.properties`)
+```properties
+server.port=8080
+server.servlet.context-path=/api
+spring.datasource.url=jdbc:h2:mem:springminddb
+spring.h2.console.enabled=true
+spring.jpa.hibernate.ddl-auto=create-drop
+app.jwt.secret=SpringMindAI_JWT_Secret_Key_Min32Chars_2026!
+spring.main.allow-circular-references=true
+```
+
+---
+
+## 🗺️ Roadmap
+
+### ✅ Phase 1 — Core Platform (Complete)
+- [x] JWT authentication and role-based access control
+- [x] Full ticket CRUD with status lifecycle
+- [x] 7-stage NLP classification pipeline
+- [x] Customer portals (no-login + full account)
+- [x] Analytics dashboard
+- [x] Knowledge base recommender
+- [x] Agent performance tracking
+- [x] SLA management and breach detection
+- [x] Docker containerisation
+- [x] Production deployment on Render + Vercel
+
+### 🔄 Phase 2 — Quality and Performance (Upcoming)
+- [ ] Real ML model via Python FastAPI microservice (BERT-based)
+- [ ] Redis caching for analytics and KB articles
+- [ ] File attachments (S3/Cloudflare R2)
+- [ ] Elasticsearch full-text search
+- [ ] Email notifications (SMTP integration)
+
+### 🔮 Phase 3 — Advanced Features (Future)
+- [ ] WebSocket real-time ticket updates
+- [ ] Auto-response bot for common queries
+- [ ] CSAT (Customer Satisfaction) surveys
+- [ ] Slack and Microsoft Teams integration
+- [ ] React Native mobile app for agents
+- [ ] Multi-tenant SaaS architecture
+- [ ] Multi-language NLP support
+
+---
+
+## 👨‍💻 Team
+
+| Member | Role | Contributions | GitHub |
+|--------|------|--------------|--------|
+| **Pratiyush Sharma** | Team Lead | Ticket Core · Billing NLP · Classify UI · **Backend + Frontend Deployment** | [@sharmapratiyush02](https://github.com/sharmapratiyush02) |
+| **Krishna Renuse** | Backend Dev | Analytics · Resolution Predictor · Lookup Portal · **Backend Deployment** | [@Krishna1808](https://github.com/Krishna1808) |
+| **Soham Satpute** | Backend Dev | Auth · Knowledge Base · Login UI · KB Search · **Backend Deployment** | [@Soham-Satpute](https://github.com/Soham-Satpute) |
+| **Yash Pathrikar** | Frontend Dev | Tickets · Customer Portal · Sentiment NLP · **Frontend Deployment** | [@yashpathrikar](https://github.com/yashpathrikar) |
+| **Neeraj Gupta** | Frontend Dev | Dashboard · Data Seeder · Critical NLP · Config · **Frontend Deployment** | [@NeerajGupta18](https://github.com/NeerajGupta18) |
+
+> B.Tech CSE AI & Data Science — Third Year | 2026
+
+---
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create your feature branch: `git checkout -b feat/your-feature`
+3. Commit your changes: `git commit -m 'feat(scope): add your feature'`
+4. Push to the branch: `git push origin feat/your-feature`
+5. Open a Pull Request
+
+---
+
+
+<div align="center">
+
+Built by Team SpringMind AI · B.Tech CSE AI&DS · 2026
+
+⭐ Star this repo if you found it helpful!
+
+</div>
